@@ -1,24 +1,58 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## ER図
+[![Image from Gyazo](https://i.gyazo.com/c20cc72cef936383c9f6449f409202b6.png)](https://gyazo.com/c20cc72cef936383c9f6449f409202b6)
 
-Things you may want to cover:
+## stores テーブル
 
-* Ruby version
+| Column             | Type   | Options     |
+| ------------------ | ------ | ----------- |
+| name               | string | null: false |
+| email              | string | null: false |
+| encrypted_password | string | null: false |
 
-* System dependencies
+### Association
 
-* Configuration
+- has_many :consultation
+- has_many :rooms, through: :consultation
+- has_many :messages
 
-* Database creation
+## rooms テーブル
 
-* Database initialization
+| Column | Type   | Options     |
+| ------ | ------ | ----------- |
+| name   | string | null: false |
 
-* How to run the test suite
+### Association
 
-* Services (job queues, cache servers, search engines, etc.)
+- has_many :consultation
+- has_many :stores, through: :consultation
+- has_many :messages
 
-* Deployment instructions
+## consultation テーブル
 
-* ...
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| store  | references | null: false, foreign_key: true |
+| room   | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :store
+- belongs_to :room
+
+## messages テーブル
+
+| Column       | Type       | Options                        |
+| ------------ | ---------- | ------------------------------ |
+| ingredients  | string     |                                |
+| preservation | boolean    |                                |
+| expiry       | datetime   |                                |
+| comment      | text       |                                |
+| store        | references | null: false, foreign_key: true |
+| room         | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :store
+- belongs_to :room
