@@ -27,15 +27,20 @@ https://hokasuna.herokuapp.com/
 [![Image from Gyazo](https://i.gyazo.com/e6aee31a8efd7618073d2ff1dfac10da.png)](https://gyazo.com/e6aee31a8efd7618073d2ff1dfac10da)
 
 # 実装予定項目
-各機能、実装後にモデル単体テストコードを記述
-- ユーザー（店舗）管理機能
-- （チャット）ルーム管理機能
-- メッセージ管理機能
+- 下記の3機能（各機能実装後にモデル単体テストコードを記述）
+  - ユーザー（店舗）管理機能
+  - （チャット）ルーム管理機能
+  - メッセージ管理機能
+- messagesテーブルの下記カラムを、送信時にGoogleスプレッドシートに、ログとして自動反映
+  - ingredients
+  - quantity
+  - preservation
+  - expiry
 
 # DB設計
 
 ## ER図
-[![Image from Gyazo](https://i.gyazo.com/c20cc72cef936383c9f6449f409202b6.png)](https://gyazo.com/c20cc72cef936383c9f6449f409202b6)
+[![Image from Gyazo](https://i.gyazo.com/7b6306c9dc587d8fae8519ae4b264eaa.png)](https://gyazo.com/7b6306c9dc587d8fae8519ae4b264eaa)
 
 ## stores テーブル
 
@@ -80,6 +85,7 @@ https://hokasuna.herokuapp.com/
 | Column       | Type       | Options                        |
 | ------------ | ---------- | ------------------------------ |
 | ingredients  | string     |                                |
+| quantity     | integer    |                                |
 | preservation | boolean    |                                |
 | expiry       | datetime   |                                |
 | comment      | text       |                                |
