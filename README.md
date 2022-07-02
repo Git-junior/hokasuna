@@ -24,7 +24,7 @@ https://hokasuna.herokuapp.com/
 
 # DEMO
 ## メッセージ一覧画面
-[![Image from Gyazo](https://i.gyazo.com/e6aee31a8efd7618073d2ff1dfac10da.png)](https://gyazo.com/e6aee31a8efd7618073d2ff1dfac10da)
+[![Image from Gyazo](https://i.gyazo.com/bf7777f44162d8f5cd6b02c57e8c4471.png)](https://gyazo.com/bf7777f44162d8f5cd6b02c57e8c4471)
 
 # 実装予定項目
 - 下記の3機能（各機能実装後にモデル単体テストコードを記述）
