@@ -65,25 +65,42 @@ RSpec.describe '店舗ログイン', type: :system do
   context 'ログインしていないとき' do
     it 'ログインしていない状態でトップページにアクセスした場合、ログインページへ移動する' do
       # トップページへ移動する
+      basic_pass root_path
+      visit root_path
       # ログインしていない場合、ログインページへ移動していることを確認する
+      expect(current_path).to eq(new_store_session_path)
     end
   end
   context 'ログインができるとき' do
     it '保存されている店舗情報と合致すればログインができる' do
       # トップページへ移動する
+      basic_pass root_path
+      visit root_path
       # ログインしていない場合、ログインページへ移動していることを確認する
+      expect(current_path).to eq(new_store_session_path)
       # 店舗情報を入力する
+      fill_in 'Email', with: @store.email
+      fill_in 'Password', with: @store.password
       # Log inボタンを押す
+      click_on ('Log in')
       # トップページへ移動したことを確認する
+      expect(current_path).to eq(root_path)
     end
   end
   context 'ログインができないとき' do
     it '保存されている店舗情報と合致しないとログインができない' do
       # トップページへ移動する
+      basic_pass root_path
+      visit root_path
       # ログインしていない場合、ログインページへ移動していることを確認する
+      expect(current_path).to eq(new_store_session_path)
       # 店舗情報を入力する
+      fill_in 'Email', with: ''
+      fill_in 'Password', with: ''
       # Log inボタンを押す
+      click_on ('Log in')
       # ログインページへ戻されることを確認する
+      expect(current_path).to eq(store_session_path)
     end
   end
 end
