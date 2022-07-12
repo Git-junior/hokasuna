@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 def basic_pass(path)
-  username = ENV["BASIC_AUTH_USER"]
-  password = ENV["BASIC_AUTH_PASSWORD"]
+  username = ENV['BASIC_AUTH_USER']
+  password = ENV['BASIC_AUTH_PASSWORD']
   visit "http://#{username}:#{password}@#{Capybara.current_session.server.host}:#{Capybara.current_session.server.port}#{path}"
 end
 
@@ -26,9 +26,9 @@ RSpec.describe '店舗新規登録', type: :system do
       fill_in 'Password', with: @store.password
       fill_in 'Password confirmation', with: @store.password_confirmation
       # Create Accountボタンを押すとStoreモデルのカウントが1上がることを確認する
-      expect{
+      expect  do
         find('input[name="commit"]').click
-      }.to change { Store.count }.by(1)
+      end.to change { Store.count }.by(1)
       # トップページへ移動したことを確認する
       expect(current_path).to eq(root_path)
     end
@@ -48,9 +48,9 @@ RSpec.describe '店舗新規登録', type: :system do
       fill_in 'Password', with: ''
       fill_in 'Password confirmation', with: ''
       # Create Accountボタンを押してもStoreモデルのカウントは上がらないことを確認する
-      expect{
+      expect  do
         find('input[name="commit"]').click
-      }.to change { Store.count }.by(0)
+      end.to change { Store.count }.by(0)
       # 新規登録ページへ戻されることを確認する
       expect(current_path).to eq(store_registration_path)
     end
@@ -82,7 +82,7 @@ RSpec.describe '店舗ログイン', type: :system do
       fill_in 'Email', with: @store.email
       fill_in 'Password', with: @store.password
       # Log inボタンを押す
-      click_on ('Log in')
+      click_on('Log in')
       # トップページへ移動したことを確認する
       expect(current_path).to eq(root_path)
     end
@@ -98,7 +98,7 @@ RSpec.describe '店舗ログイン', type: :system do
       fill_in 'Email', with: ''
       fill_in 'Password', with: ''
       # Log inボタンを押す
-      click_on ('Log in')
+      click_on('Log in')
       # ログインページへ戻されることを確認する
       expect(current_path).to eq(store_session_path)
     end
