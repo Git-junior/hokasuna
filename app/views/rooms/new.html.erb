@@ -1,9 +1,6 @@
 <div class='chat-room-form'>
   <h1>新規チャットルーム</h1>
   <%=form_with model: @room, local: true do |f|%>
-<%
-=begin
-%>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>
         <%= f.label :name, :チャットルーム名, class: 'chat-room-form__label'%>
@@ -12,9 +9,6 @@
         <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: 'チャットルーム名を入力してください'%>
       </div>
     </div>
-<%
-=end
-%>
     <div class='chat-room-form__field'>
     </div>
     <div class='chat-room-form__field'>
@@ -23,7 +17,7 @@
       </div>
       <div class='chat-room-form__field--right'>
         <select name="room[store_ids][]">
-          <option value="">店舗を選んでください</option>
+          <option value="">店舗を選択してください</option>
           <% Store.where.not(id: current_store.id).each do |store| %>
             <option value=<%= store.id %>><%= store.name %></option>
           <% end %>
