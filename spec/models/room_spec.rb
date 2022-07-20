@@ -8,12 +8,14 @@ RSpec.describe Room, type: :model do
   describe 'チャットルーム作成' do
     context '新規作成できるとき' do
       it 'nameが存在すれば作成できる' do
-        
+        expect(@room).to be_valid
       end
     end
     context '新規作成できないとき' do
       it 'nameが空では作成できない' do
-        
+        @room.name = ''
+        @room.valid?
+        expect(@room.errors.full_messages).to include("Name can't be blank")
       end
     end
   end
