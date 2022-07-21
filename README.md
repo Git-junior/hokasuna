@@ -8,9 +8,29 @@
 # 本番環境
 https://hokasuna.herokuapp.com/
 
-## Basic認証
-- ID : admin
-- PASS : 2222
+# ログイン/ログアウト方法
+- Basic認証
+  - ID : admin
+  - PASS : 2222
+
+- テスト用アカウント
+  - アカウント1（池袋）
+    - メールアドレス : ikebukuro@cafe.com
+    - パスワード : ikebukuro
+
+  - アカウント2（名古屋）
+    - メールアドレス : nagoya@cafe.com
+    - パスワード : nagoya
+
+  - アカウント3（天王寺）
+    - メールアドレス : tennoji@cafe.com
+    - パスワード : tennoji
+
+- ログアウト方法
+1. トップページのサイドバーの店舗名（画像では「池袋」）をクリック
+[![Image from Gyazo](https://i.gyazo.com/aa4570bd1ad2203c956e20e6c2d6e78c.png)](https://gyazo.com/aa4570bd1ad2203c956e20e6c2d6e78c)
+2. 「ログアウト」ボタンをクリック
+[![Image from Gyazo](https://i.gyazo.com/a1cb65713a4ef82fc6f0b85f750f605c.png)](https://gyazo.com/a1cb65713a4ef82fc6f0b85f750f605c)
 
 # 利用方法
 1. 店舗情報を登録
