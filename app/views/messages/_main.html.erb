@@ -91,33 +91,6 @@
   </div>
 </div>
 
-<%
-=begin
-%>
-<div class="form">
-  <div class="left-form">
-    <div class="upper-form">
-      <input class="form-comment" placeholder="コメント">
-    </div>
-    <div class="lower-form">
-      <input class="form-ingredients" placeholder="食材名">
-      <input class="form-quantity" placeholder="数量(PC単位)">
-      <form class="form-preservation">
-        <label class="form-radio"><input type="radio" name="保存状態" value="常温">常温</label>
-        <label class="form-radio"><input type="radio" name="保存状態" value="冷蔵">冷蔵</label>
-        <label class="form-radio"><input type="radio" name="保存状態" value="冷凍">冷凍</label>
-      </form>
-      <input class="form-expiry" placeholder="YYYY/MM/DD">
-    </div>
-  </div>
-  <div class="right-form">
-    <input class="form-submit" type="submit" value="送信">
-  </div>
-</div>
-<%
-=end
-%>
-
 <%= form_with model: [@room, @message], class: "form", local: true do |f| %>
   <div class="left-form">
     <div class="upper-form">
