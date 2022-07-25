@@ -94,7 +94,7 @@
 <%= form_with model: [@room, @message], class: "form", local: true do |f| %>
   <div class="left-form">
     <div class="upper-form">
-      <%= f.text_field :comment, class: "form-comment", placeholder: "コメント" %>
+      <%= f.text_field :comment, class: "form-comment", placeholder: "コメント（必須）" %>
     </div>
     <div class="lower-form">
       <%= f.text_field :ingredients, class: "form-ingredients", placeholder: "食材名" %>
