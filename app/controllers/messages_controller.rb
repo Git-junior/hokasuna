@@ -3,4 +3,20 @@ class MessagesController < ApplicationController
     @message = Message.new
     @room = Room.find(params[:room_id])
   end
+
+  def create
+    @room = Room.find(params[:room_id])
+    @message = @room.messages.new(message_params)
+    if @message.save
+      redirect_to room_messages_path(@room)
+    else
+      render :index
+    end
+  end
+
+  private
+
+  def message_params
+    params.require(:message).permit(:comment, :ingredients, :quantity, :preservation, :expiry).merge(store_id: current_store.id)
+  end
 end
