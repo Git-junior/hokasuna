@@ -66,7 +66,7 @@ https://hokasuna.herokuapp.com/
 # DB設計
 
 ## ER図
-[![Image from Gyazo](https://i.gyazo.com/7b6306c9dc587d8fae8519ae4b264eaa.png)](https://gyazo.com/7b6306c9dc587d8fae8519ae4b264eaa)
+[![Image from Gyazo](https://i.gyazo.com/2a182cd475cefa8e008e37d6632e4787.png)](https://gyazo.com/2a182cd475cefa8e008e37d6632e4787)
 
 ## stores テーブル
 
@@ -110,11 +110,11 @@ https://hokasuna.herokuapp.com/
 
 | Column       | Type       | Options                        |
 | ------------ | ---------- | ------------------------------ |
+| comment      | text       | null: false                    |
 | ingredients  | string     |                                |
 | quantity     | integer    |                                |
 | preservation | boolean    |                                |
 | expiry       | datetime   |                                |
-| comment      | text       |                                |
 | store        | references | null: false, foreign_key: true |
 | room         | references | null: false, foreign_key: true |
 
