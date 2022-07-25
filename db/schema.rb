@@ -22,11 +22,11 @@ ActiveRecord::Schema.define(version: 2022_07_22_101955) do
   end
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "comment", null: false
     t.string "ingredients"
     t.integer "quantity"
     t.boolean "preservation"
     t.datetime "expiry"
-    t.text "comment"
     t.bigint "store_id", null: false
     t.bigint "room_id", null: false
     t.datetime "created_at", precision: 6, null: false
