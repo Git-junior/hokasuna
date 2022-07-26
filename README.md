@@ -112,9 +112,9 @@ https://hokasuna.herokuapp.com/
 | ------------ | ---------- | ------------------------------ |
 | comment      | text       | null: false                    |
 | ingredients  | string     |                                |
-| quantity     | integer    |                                |
+| quantity     | string     |                                |
 | preservation | boolean    |                                |
-| expiry       | datetime   |                                |
+| expiry       | date       |                                |
 | store        | references | null: false, foreign_key: true |
 | room         | references | null: false, foreign_key: true |
 
