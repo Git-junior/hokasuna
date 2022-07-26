@@ -196,6 +196,10 @@
   margin-left: 10px;
 }
 
+.form-quantity::placeholder {
+  color: blue;
+}
+
 .form-preservation {
   height: 50px;
   width: 20%;
