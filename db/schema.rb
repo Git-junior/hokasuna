@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2022_07_22_101955) do
     t.text "comment", null: false
     t.string "ingredients"
     t.string "quantity"
-    t.boolean "preservation"
+    t.string "preservation"
     t.date "expiry"
     t.bigint "store_id", null: false
     t.bigint "room_id", null: false

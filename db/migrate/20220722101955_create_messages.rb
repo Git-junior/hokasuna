@@ -4,7 +4,7 @@ class CreateMessages < ActiveRecord::Migration[6.0]
       t.text :comment, null: false
       t.string :ingredients
       t.string :quantity
-      t.boolean :preservation
+      t.string :preservation
       t.date :expiry
       t.references :store, null: false, foreign_key: true
       t.references :room, null: false, foreign_key: true 
