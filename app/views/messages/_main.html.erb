@@ -15,7 +15,7 @@
   <%= render partial: "message", collection: @messages %>
 </div>
 
-<%= form_with model: [@room, @message], class: "form", local: true do |f| %>
+<%= form_with model: [@room, @message], class: "form" do |f| %>
   <div class="left-form">
     <div class="upper-form">
       <%= f.text_field :comment, class: "form-comment", placeholder: "コメント（※必須）" %>
