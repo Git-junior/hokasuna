@@ -1,6 +1,7 @@
 function post() {
   const submit = document.getElementsByClassName("form-submit")[0];
-  submit.addEventListener('click', () => {
+  submit.addEventListener('click', (e) => {
+    e.preventDefault();
     const form = document.getElementsByClassName("form")[0];
     const formData = new FormData(form);
     const XHR = new XMLHttpRequest();
