@@ -5,7 +5,8 @@ function post() {
     const form = document.getElementsByClassName("form")[0];
     const formData = new FormData(form);
     const XHR = new XMLHttpRequest();
-    XHR.open("POST", "/rooms/:room_id/messages", true);
+    let url = window.location.pathname;
+    XHR.open("POST", url, true);
     XHR.responseType = "json";
     XHR.send(formData);
   });
