@@ -9,6 +9,8 @@ function post() {
     XHR.open("POST", url, true);
     XHR.responseType = "json";
     XHR.send(formData);
+    XHR.onload = () => {
+    };
   });
 }
 
