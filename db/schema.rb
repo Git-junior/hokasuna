@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_07_14_062744) do
+ActiveRecord::Schema.define(version: 2022_07_22_101955) do
 
   create_table "consultations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "store_id", null: false
@@ -19,6 +19,20 @@ ActiveRecord::Schema.define(version: 2022_07_14_062744) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["room_id"], name: "index_consultations_on_room_id"
     t.index ["store_id"], name: "index_consultations_on_store_id"
+  end
+
+  create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "comment", null: false
+    t.string "ingredients"
+    t.string "quantity"
+    t.string "preservation"
+    t.date "expiry"
+    t.bigint "store_id", null: false
+    t.bigint "room_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["room_id"], name: "index_messages_on_room_id"
+    t.index ["store_id"], name: "index_messages_on_store_id"
   end
 
   create_table "rooms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -42,4 +56,6 @@ ActiveRecord::Schema.define(version: 2022_07_14_062744) do
 
   add_foreign_key "consultations", "rooms"
   add_foreign_key "consultations", "stores"
+  add_foreign_key "messages", "rooms"
+  add_foreign_key "messages", "stores"
 end

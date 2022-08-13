@@ -8,4 +8,5 @@ class Store < ApplicationRecord
 
   has_many :consultation
   has_many :rooms, through: :consultation
+  has_many :messages
 end
