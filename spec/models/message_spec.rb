@@ -20,12 +20,12 @@ RSpec.describe Message, type: :model do
       it 'storeが紐付いていなければ投稿できない' do
         @message.store = nil
         @message.valid?
-        expect(@message.errors.full_messages).to include("Store must exist")
+        expect(@message.errors.full_messages).to include('Store must exist')
       end
       it 'roomが紐付いていなければ投稿できない' do
         @message.room = nil
         @message.valid?
-        expect(@message.errors.full_messages).to include("Room must exist")
+        expect(@message.errors.full_messages).to include('Room must exist')
       end
     end
   end
