@@ -17,7 +17,18 @@ if (location.pathname.match(/\/rooms\/\d\/messages/)) {
 
     received(data) {
       // Called when there's incoming data on the websocket for this channel
-      const messageDate = new Date().toLocaleString()
+      const yyyymmdd = new Intl.DateTimeFormat(
+        undefined,
+        {
+          year:   'numeric',
+          month:  '2-digit',
+          day:    '2-digit',
+          hour:   '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+        }
+      );
+      const messageDate = yyyymmdd.format( new Date() );
       const html = `
         <div class="message">
           <div class="upper-message">
