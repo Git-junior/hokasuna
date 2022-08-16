@@ -114,7 +114,7 @@ https://hokasuna.herokuapp.com/
 | ingredients  | string     |                                |
 | quantity     | string     |                                |
 | preservation | string     |                                |
-| expiry       | date       |                                |
+| expiry       | string     |                                |
 | store        | references | null: false, foreign_key: true |
 | room         | references | null: false, foreign_key: true |
 
