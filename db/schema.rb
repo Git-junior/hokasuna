@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2022_07_22_101955) do
     t.string "ingredients"
     t.string "quantity"
     t.string "preservation"
-    t.date "expiry"
+    t.string "expiry"
     t.bigint "store_id", null: false
     t.bigint "room_id", null: false
     t.datetime "created_at", precision: 6, null: false
