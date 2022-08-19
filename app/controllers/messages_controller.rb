@@ -10,7 +10,7 @@ class MessagesController < ApplicationController
     @message = @room.messages.new(message_params)
     if @message.save
       @message.preservation = '' if @message.preservation.nil?
-      MessageChannel.broadcast_to @room, { message: @message, store: @message.store }
+      redirect_to room_messages_path(@room)
     else
       @messages = @room.messages.includes(:store)
       render :index
