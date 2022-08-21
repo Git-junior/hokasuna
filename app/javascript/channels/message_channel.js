@@ -1,6 +1,6 @@
 import consumer from "./consumer"
 
-if (location.pathname.match(/\/rooms\/\d/)) {
+if (location.pathname.match(/\/rooms\/\d+\/messages/)) {
 
   consumer.subscriptions.create({
     channel: "MessageChannel",
