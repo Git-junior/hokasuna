@@ -9,6 +9,7 @@ class MessagesController < ApplicationController
     @room = Room.find(params[:room_id])
     @message = @room.messages.new(message_params)
     if @message.save
+      binding.pry
       @message.preservation = '' if @message.preservation.nil?
       MessageChannel.broadcast_to @room, { message: @message, store: @message.store }
     else
