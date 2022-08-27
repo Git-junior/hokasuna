@@ -5,7 +5,7 @@ class CreateMessages < ActiveRecord::Migration[6.0]
       t.string :ingredients
       t.string :quantity
       t.string :preservation
-      t.string :expiry
+      t.date :expiry
       t.references :store, null: false, foreign_key: true
       t.references :room, null: false, foreign_key: true 
       t.timestamps
