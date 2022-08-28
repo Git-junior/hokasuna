@@ -5,4 +5,7 @@ class Business < ActiveHash::Base
     { id: 3, name: '【依頼】貰って！！' },
     { id: 4, name: '【返答】' }
   ]
+
+  include ActiveHash::Associations
+  has_many :messages
 end
