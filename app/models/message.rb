@@ -5,5 +5,5 @@ class Message < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :business
 
-  validates :business_id, numericality: { other_than: 1 }
+  validates :business_id, numericality: { other_than: 1, message: "can't be blank" }
 end
