@@ -18,20 +18,12 @@
 <%= form_with model: [@room, @message], class: "form" do |f| %>
   <div class="left-form">
     <div class="upper-form">
-      <%= f.text_field :comment, class: "form-comment", placeholder: "コメント（※必須）" %>
-    </div>
-    <div class="lower-form">
+      <%= f.collection_select(:business_id, Business.all, :id, :name, {}, { class: "form-business-select" }) %>
       <%= f.text_field :ingredients, class: "form-ingredients", placeholder: "食材名" %>
       <%= f.text_field :quantity, class: "form-quantity", placeholder: "数量（単位含む）" %>
-      <div class="form-preservation">
-        <%= f.radio_button :preservation, :"常温" %>
-        <%= f.label :preservation, "常温", value: "常温", class: "form-radio" %>
-        <%= f.radio_button :preservation, :"冷蔵" %>
-        <%= f.label :preservation, "冷蔵", value: "冷蔵", class: "form-radio" %>
-        <%= f.radio_button :preservation, :"冷凍" %>
-        <%= f.label :preservation, "冷凍", value: "冷凍", class: "form-radio" %>
-      </div>
-      <%= f.text_field :expiry, class: "form-expiry", placeholder: "YYYY/MM/DD" %>
+    </div>
+    <div class="lower-form">
+      <%= f.text_field :comment, class: "form-comment", placeholder: "特記事項" %>
     </div>
   </div>
   <div class="right-form">
