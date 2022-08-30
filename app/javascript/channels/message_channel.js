@@ -40,22 +40,19 @@ if (location.pathname.match(/\/rooms\/\d+\/messages/)) {
             </div>
           </div>
           <div class="middle-message">
-            <div class="message-comment">
-              ${data.message.comment}
+            <div class="message-business">
+              ${data.message.business.name}
             </div>
-          </div>
-          <div class="lower-message">
             <div class="message-ingredients">
               ${data.message.ingredients}
             </div>
             <div class="message-quantity">
               ${data.message.quantity}
             </div>
-            <div class="message-preservation">
-              ${data.message.preservation}
-            </div>
-            <div class="message-expiry">
-              ${data.message.expiry}
+          </div>
+          <div class="lower-message">
+            <div class="message-comment">
+              ${data.message.comment}
             </div>
           </div>
         </div>`;
