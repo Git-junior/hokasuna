@@ -117,35 +117,30 @@
 }
 
 .middle-message {
-  margin-top: 10px;
-}
-
-.message-comment {
-  color: #434a54;
-  font-size: 14px;
-}
-
-.lower-message {
-  text-decoration: underline;
   display: flex;
   margin-top: 10px;
 }
 
-.message-ingredients,.message-quantity {
+.message-business {
   color: #434a54;
   font-size: 14px;
   font-weight: bold;
   padding-left: 10px;
 }
 
-.message-preservation {
+.message-ingredients,.message-quantity {
+  color: #434a54;
   font-size: 14px;
   padding-left: 10px;
 }
 
-.message-expiry {
+.lower-message {
+  margin-top: 10px;
+}
+
+.message-comment {
+  color: #434a54;
   font-size: 14px;
-  font-family: Verdana, Geneva, Tahoma, sans-serifz1z;
   padding-left: 10px;
 }
 

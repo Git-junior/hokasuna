@@ -10,12 +10,10 @@
     </div>
   </div>
   <div class="middle-message">
-    <div class="message-comment">
-      <%# コメント %>
-      <%= message.comment %>
+    <div class="message-business">
+      <%# 御用件 %>
+      <%= message.business.name %>
     </div>
-  </div>
-  <div class="lower-message">
     <div class="message-ingredients">
       <%# 食材名 %>
       <%= message.ingredients %>
@@ -24,13 +22,11 @@
       <%# 数量 %>
       <%= message.quantity %>
     </div>
-    <div class="message-preservation">
-      <%# 保存条件 %>
-      <%= message.preservation %>
-    </div>
-    <div class="message-expiry">
-      <%# 期限 %>
-      <%= message.expiry %>
+  </div>
+  <div class="lower-message">
+    <div class="message-comment">
+      <%# コメント %>
+      <%= message.comment %>
     </div>
   </div>
 </div>
