@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2022_07_22_101955) do
   end
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "business_id", null: false
+    t.string "business", null: false
     t.string "ingredients", default: "", null: false
     t.string "quantity", default: "", null: false
     t.text "comment"
