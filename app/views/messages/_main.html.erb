@@ -18,7 +18,9 @@
 <%= form_with model: [@room, @message], class: "form" do |f| %>
   <div class="left-form">
     <div class="upper-form">
-      <%= f.collection_select(:business_id, Business.all, :id, :name, {}, { class: "form-business-select" }) %>
+      <div class= "form-business-select">
+        <%= f.select :business, ['【依頼】譲って！！', '【依頼】貰って！！', '【返答】'], include_blank: '▼ 御用件を選択 ▼' %>
+      </div>
       <%= f.text_field :ingredients, class: "form-ingredients", placeholder: "食材名" %>
       <%= f.text_field :quantity, class: "form-quantity", placeholder: "数量（単位含む）" %>
     </div>
