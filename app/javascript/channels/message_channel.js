@@ -41,7 +41,7 @@ if (location.pathname.match(/\/rooms\/\d+\/messages/)) {
           </div>
           <div class="middle-message">
             <div class="message-business">
-              ${data.message.business.name}
+              ${data.message.business}
             </div>
             <div class="message-ingredients">
               ${data.message.ingredients}
