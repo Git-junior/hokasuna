@@ -19,6 +19,6 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:business_id, :ingredients, :quantity, :comment).merge(store_id: current_store.id)
+    params.require(:message).permit(:business, :ingredients, :quantity, :comment).merge(store_id: current_store.id)
   end
 end
