@@ -7,15 +7,15 @@ RSpec.describe Message, type: :model do
 
   describe 'メッセージ投稿' do
     context 'メッセージが投稿できるとき' do
-      it 'commentが存在すれば投稿できる' do
+      it 'businessが存在すれば投稿できる' do
         expect(@message).to be_valid
       end
     end
     context 'メッセージが投稿できないとき' do
-      it 'commentが空では投稿できない' do
-        @message.comment = ''
+      it 'businessが空では投稿できない' do
+        @message.business = ''
         @message.valid?
-        expect(@message.errors.full_messages).to include("Comment can't be blank")
+        expect(@message.errors.full_messages).to include("Business can't be blank")
       end
       it 'storeが紐付いていなければ投稿できない' do
         @message.store = nil

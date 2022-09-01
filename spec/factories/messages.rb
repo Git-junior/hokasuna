@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :message do
-    comment { Faker::Lorem.sentence }
+    business { '【依頼】譲って！！' }
     association :store
     association :room
   end

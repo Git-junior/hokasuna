@@ -117,35 +117,29 @@
 }
 
 .middle-message {
+  display: flex;
+  margin-top: 10px;
+}
+
+.message-business {
+  color: #434a54;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.message-ingredients,.message-quantity {
+  color: #434a54;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.lower-message {
   margin-top: 10px;
 }
 
 .message-comment {
   color: #434a54;
   font-size: 14px;
-}
-
-.lower-message {
-  text-decoration: underline;
-  display: flex;
-  margin-top: 10px;
-}
-
-.message-ingredients,.message-quantity {
-  color: #434a54;
-  font-size: 14px;
-  font-weight: bold;
-  padding-left: 10px;
-}
-
-.message-preservation {
-  font-size: 14px;
-  padding-left: 10px;
-}
-
-.message-expiry {
-  font-size: 14px;
-  font-family: Verdana, Geneva, Tahoma, sans-serifz1z;
   padding-left: 10px;
 }
 
@@ -165,7 +159,32 @@
 
 .upper-form {
   width: 100%;
+  display: flex;
   margin-bottom: 20px;
+}
+
+.form-business-select {
+  height: 50px;
+  width: 15%;
+  background-color: white;
+}
+
+.form-ingredients {
+  height: 50px;
+  width: 55%;
+  background-color: white;
+  margin-left: 10px;
+}
+
+.form-quantity {
+  height: 50px;
+  width: 30%;
+  background-color: white;
+  margin-left: 10px;
+}
+
+.lower-form {
+  width: 100%;
 }
 
 .form-comment {
@@ -176,46 +195,6 @@
 
 .form-comment::placeholder {
   color: red;
-}
-
-.lower-form {
-  width: 100%;
-  display: flex;
-}
-
-.form-ingredients {
-  height: 50px;
-  width: 40%;
-  background-color: white;
-}
-
-.form-quantity {
-  height: 50px;
-  width: 20%;
-  background-color: white;
-  margin-left: 10px;
-}
-
-.form-quantity::placeholder {
-  color: blue;
-}
-
-.form-preservation {
-  height: 50px;
-  width: 20%;
-  background-color: white;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border: 2px solid #333;
-  margin-left: 10px;
-}
-
-.form-expiry {
-  height: 50px;
-  width: 20%;
-  background-color: white;
-  margin-left: 10px;
 }
 
 .right-form {
