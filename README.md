@@ -66,7 +66,7 @@ https://hokasuna.herokuapp.com/
 # DB設計
 
 ## ER図
-[![Image from Gyazo](https://i.gyazo.com/2a182cd475cefa8e008e37d6632e4787.png)](https://gyazo.com/2a182cd475cefa8e008e37d6632e4787)
+[![Image from Gyazo](https://i.gyazo.com/94ebb65f3b45648918a45edb0e42942c.png)](https://gyazo.com/94ebb65f3b45648918a45edb0e42942c)
 
 ## stores テーブル
 
@@ -108,15 +108,14 @@ https://hokasuna.herokuapp.com/
 
 ## messages テーブル
 
-| Column       | Type       | Options                        |
-| ------------ | ---------- | ------------------------------ |
-| comment      | text       | null: false                    |
-| ingredients  | string     |                                |
-| quantity     | string     |                                |
-| preservation | string     |                                |
-| expiry       | string     |                                |
-| store        | references | null: false, foreign_key: true |
-| room         | references | null: false, foreign_key: true |
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| business    | string     | null: false                    |
+| ingredients | string     | null: false, default: ''       |
+| quantity    | string     | null: false, default: ''       |
+| comment     | text       |                                |
+| store       | references | null: false, foreign_key: true |
+| room        | references | null: false, foreign_key: true |
 
 ### Association
 
