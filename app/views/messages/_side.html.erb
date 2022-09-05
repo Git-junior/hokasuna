@@ -1,9 +1,16 @@
 <div class="side-header">
-  <div class="header-name">
-    <%= link_to current_store.name, edit_store_path(current_store) %>
+  <div class="side-left-header">
+    <div class="header-name">
+      <%= link_to current_store.name, edit_store_path(current_store) %>
+    </div>
   </div>
-  <div class="create-room">
-    <%= link_to "チャットの作成", new_room_path %>
+  <div class="side-right-header">
+    <div class="create-room">
+      <%= link_to "チャットの作成", new_room_path %>
+    </div>
+    <div class="logout">
+      <%= link_to "ログアウト", destroy_store_session_path, method: :delete %>
+    </div>
   </div>
 </div>
 
