@@ -8,7 +8,7 @@
 # 本番環境
 https://hokasuna.herokuapp.com/
 
-# ログイン/ログアウト方法
+# ログイン方法
 - Basic認証
   - ID : admin
   - PASS : 2222
@@ -26,12 +26,6 @@ https://hokasuna.herokuapp.com/
     - メールアドレス : tennoji@cafe.com
     - パスワード : tennoji
 
-- ログアウト方法
-1. トップページのサイドバーの店舗名（画像では「池袋」）をクリック
-[![Image from Gyazo](https://i.gyazo.com/aa4570bd1ad2203c956e20e6c2d6e78c.png)](https://gyazo.com/aa4570bd1ad2203c956e20e6c2d6e78c)
-2. 「ログアウト」ボタンをクリック
-[![Image from Gyazo](https://i.gyazo.com/a1cb65713a4ef82fc6f0b85f750f605c.png)](https://gyazo.com/a1cb65713a4ef82fc6f0b85f750f605c)
-
 # 利用方法
 1. 店舗情報を登録
 2. 食材の融通相談をしたい、登録済の店舗とチャットで相談
@@ -48,10 +42,10 @@ https://hokasuna.herokuapp.com/
 # DEMO
 
 ## メッセージ一覧画面
-[![Image from Gyazo](https://i.gyazo.com/bf7777f44162d8f5cd6b02c57e8c4471.png)](https://gyazo.com/bf7777f44162d8f5cd6b02c57e8c4471)
+[![Image from Gyazo](https://i.gyazo.com/ce553a937a60fe2313034ea1402fa030.png)](https://gyazo.com/ce553a937a60fe2313034ea1402fa030)
 
 ## ログ一覧画面
-[![Image from Gyazo](https://i.gyazo.com/7249f00d51e0c9a7dde3a571ac625f46.png)](https://gyazo.com/7249f00d51e0c9a7dde3a571ac625f46)
+[![Image from Gyazo](https://i.gyazo.com/cf5ac72e92d169fa50694473dec3d709.png)](https://gyazo.com/cf5ac72e92d169fa50694473dec3d709)
 
 # 実装予定項目
 下記4機能
