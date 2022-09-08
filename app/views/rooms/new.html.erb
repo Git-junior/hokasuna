@@ -16,7 +16,7 @@
         <label class='chat-room-form__label' for='chat_room_チャットメンバー'>チャットメンバー</label>
       </div>
       <div class='chat-room-form__field--right'>
-        <select name="room[store_ids][]">
+        <select name="room[store_ids][]" id='chat_room_チャットメンバー'>
           <option value="">店舗を選択してください</option>
           <% Store.where.not(id: current_store.id).each do |store| %>
             <option value=<%= store.id %>><%= store.name %></option>
