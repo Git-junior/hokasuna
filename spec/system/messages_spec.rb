@@ -1,9 +1,26 @@
 require 'rails_helper'
 
-RSpec.describe "Messages", type: :system do
+RSpec.describe "メッセージ投稿", type: :system do
   before do
-    driven_by(:rack_test)
+    @consultation = FactoryBot.create(:consultation)
   end
 
-  pending "add some scenarios (or delete) #{__FILE__}"
+  context 'メッセージ投稿ができるとき' do
+    it '正しい情報を入力すればメッセージ投稿ができて、投稿内容が表示されている' do
+      # ログインする
+      # 作成されたチャットルームへ移動する
+      # メッセージ情報を入力する
+      # 送信ボタンを押すとMessageモデルのカウントが1上がることを確認する
+      # 送信した値がブラウザに表示されていることを確認する
+    end
+  end
+  context 'メッセージ投稿ができないとき' do
+    it '誤った情報ではメッセージ投稿ができない' do
+      # ログインする
+      # 作成されたチャットルームへ移動する
+      # メッセージ情報を入力する
+      # 送信ボタンを押してもMessageモデルのカウントは上がらないことを確認する
+      # 送信した値がブラウザに表示されていないことを確認する
+    end
+  end
 end
