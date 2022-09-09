@@ -1,4 +1,4 @@
-module SignInSupport
+module LogInSupport
   # Basic認証
   def basic_pass(path)
     username = ENV['BASIC_AUTH_USER']
