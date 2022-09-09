@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "チャットルーム新規作成", type: :system do
+RSpec.describe 'チャットルーム新規作成', type: :system do
   before do
     @store1 = FactoryBot.create(:store)
     @store2 = FactoryBot.create(:store)
@@ -18,9 +18,9 @@ RSpec.describe "チャットルーム新規作成", type: :system do
       fill_in 'チャットルーム名', with: @store1.rooms.name
       select @store2.name, from: 'chat_room_チャットメンバー'
       # Create Roomボタンを押すとRoomモデルのカウントが1上がることを確認する
-      expect {
+      expect do
         find('input[name="commit"]').click
-      }.to change { Room.count }.by(1)
+      end.to change { Room.count }.by(1)
       # トップページへ移動したことを確認する
       expect(current_path).to eq(root_path)
     end
@@ -37,9 +37,9 @@ RSpec.describe "チャットルーム新規作成", type: :system do
       fill_in 'チャットルーム名', with: ''
       select @store2.name, from: 'chat_room_チャットメンバー'
       # Create Roomボタンを押してもRoomモデルのカウントは上がらないことを確認する
-      expect {
+      expect do
         find('input[name="commit"]').click
-      }.to change { Room.count }.by(0)
+      end.to change { Room.count }.by(0)
       # 新規作成ページへ戻されることを確認する
       expect(current_path).to eq(rooms_path)
     end
