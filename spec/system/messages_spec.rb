@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "メッセージ投稿", type: :system do
+RSpec.describe 'メッセージ投稿', type: :system do
   before do
     @consultation = FactoryBot.create(:consultation)
   end
@@ -20,7 +20,7 @@ RSpec.describe "メッセージ投稿", type: :system do
       # 【要修正】
       # 送信ボタンを押すとMessageモデルのカウントが1上がることを確認する
       # expect {
-        # find('input[name="commit"]').click
+      # find('input[name="commit"]').click
       # }.to change { Message.count }.by(1)
 
       # 【仮】
@@ -42,9 +42,9 @@ RSpec.describe "メッセージ投稿", type: :system do
       fill_in 'message[quantity]', with: '1個'
       fill_in 'message[comment]', with: 'コメント'
       # 送信ボタンを押してもMessageモデルのカウントは上がらないことを確認する
-      expect {
+      expect do
         find('input[name="commit"]').click
-      }.to change { Message.count }.by(0)
+      end.to change { Message.count }.by(0)
       # 送信した値がブラウザに表示されていないことを確認する
       expect(page).to have_no_content('コメント')
     end
