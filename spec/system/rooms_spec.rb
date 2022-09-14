@@ -45,3 +45,17 @@ RSpec.describe 'チャットルーム新規作成', type: :system do
     end
   end
 end
+
+RSpec.describe 'チャットルーム削除', type: :system do
+  before do
+    @consultation = FactoryBot.create(:consultation)
+  end
+
+  it 'チャットルームを削除すると、関連するメッセージが全て削除される' do
+    # ログインする
+    # 作成されたチャットルームへ移動する
+    # メッセージ情報を2つDBに追加する
+    # 「チャットを終了」ボタンをクリックすることで、作成した2つのメッセージが削除されていることを確認する
+    # トップページに遷移していることを確認する
+  end
+end
