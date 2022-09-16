@@ -59,9 +59,9 @@ RSpec.describe 'チャットルーム削除', type: :system do
     # メッセージ情報を2つDBに追加する
     FactoryBot.create_list(:message, 2, room_id: @consultation.room.id, store_id: @consultation.store.id)
     # 「チャットを終了」ボタンをクリックすることで、作成した2つのメッセージが削除されていることを確認する
-    expect {
+    expect do
       find_link('チャットを終了', href: room_path(@consultation.room)).click
-    }.to change { @consultation.room.messages.count }.by(-2)
+    end.to change { @consultation.room.messages.count }.by(-2)
     # トップページに遷移していることを確認する
     expect(current_path).to eq(root_path)
   end
